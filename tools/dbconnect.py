@@ -13,7 +13,7 @@ class DBConnect():
         """
 
         host = '127.0.0.1'
-        conn = pymysql.connect(host=host, port=3306, user='root', db=db)
+        conn = pymysql.connect(host=host, port=3306, user='root', passwd = 'mysql', db=db)
 
         return conn
 
@@ -42,3 +42,5 @@ class DBConnect():
 
         conn.close()
         cur.close()
+
+        return all_rows

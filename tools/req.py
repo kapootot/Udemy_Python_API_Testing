@@ -30,7 +30,7 @@ class REQ():
 
         result = self.wcapi.post(endpoint, data)
 
-        rs_code = result.response_code
+        rs_code = result.status_code
         rs_body = result.json()
         rs_url = result.url
 
