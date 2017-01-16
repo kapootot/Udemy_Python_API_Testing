@@ -1,12 +1,8 @@
 from tools import req
 from tools import dbconnect
-import json
 
-rq = req.REQ()
 
-qry = dbconnect.DBConnect()
-
-def create_a_product():
+def test_create_a_product():
     """
 
     :return:
@@ -45,6 +41,7 @@ def create_a_product():
 
     print "\nTest PASS"
 
+
 def test_verify_product_created_in_db():
     """
 
@@ -69,7 +66,9 @@ def test_verify_product_created_in_db():
 
     print "test_verify_product_created_in_db - PASS"
 
-create_a_product()
+rq = req.REQ()
+qry = dbconnect.DBConnect()
+test_create_a_product()
 test_verify_product_created_in_db()
 
 
